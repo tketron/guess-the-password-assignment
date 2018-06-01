@@ -5,10 +5,8 @@ $(function() {
 
   let $start = $('#start');
   $start.on('click', () => {
-    $('#start-screen').toggleClass('show');
-    $('#start-screen').toggleClass('hide');
-    $('#game-screen').toggleClass('show');
-    $('#game-screen').toggleClass('hide');
+    $('#start-screen').toggleClass('show hide');
+    $('#game-screen').toggleClass('show hide');
     startGame();
   });
 
@@ -63,12 +61,10 @@ $(function() {
 
       // check whether the game is over
       if (similarityScore === password.length) {
-        $('#winner').toggleClass('hide');
-        $('#winner').toggleClass('show');
+        $('#winner').toggleClass('hide show');
         this.removeEventListener('click', updateGame);
       } else if (guessCount === 0) {
-        $('#loser').toggleClass('hide');
-        $('#loser').toggleClass('show');
+        $('#loser').toggleClass('hide show');
         this.removeEventListener('click', updateGame);
       }
     }

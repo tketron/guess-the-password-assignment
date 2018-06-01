@@ -12,12 +12,6 @@ $(function() {
     startGame();
   });
 
-  function toggleClasses(element) {
-    for (let i = 1; i < arguments.length; i++) {
-      element.classList.toggle(arguments[i]);
-    }
-  }
-
   function startGame() {
     // get random words and append them to the DOM
     let $wordList = $('#word-list');
